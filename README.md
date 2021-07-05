@@ -3,6 +3,14 @@
 This is a failed attempt of setting up an angular workspace as a monorepo,
 containing multiple libraries (-> packages) and a test application.
 
+## Goal
+
+The goal is to transform [this project](https://github.com/MintPlayer/mintplayer-ng-youtube-player) into a monorepo with 2 libraries:
+- 1 for the `YoutubeApiService`, which loads the youtube-iframe-api script in the DOM
+- 1 for the `YoutubePlayerComponent`
+
+Then I can create a `VideoPlayerComponent` using the `YoutubeApiService`, `DailymotionApiService` and `VimeoApiService`.
+
 ## Test
 
 To replicate the issue, run the following commands to clone and build the repository:
@@ -24,3 +32,5 @@ The build fails with the following error:
     'rootDir' is expected to contain all source files.
 
 Claiming that the `NgYoutubeApiService` should also be inside the `ng-youtube-player` library project (which off course is BS).
+
+So from the moment you're trying to inject a service from one library into a component from another library, the build is broken.
