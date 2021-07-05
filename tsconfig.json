@@ -2,6 +2,14 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "@mintplayer/ng-youtube-api": [
+        "projects/mintplayer/ng-youtube-api/src/public-api.ts"
+      ],
+      "@mintplayer/ng-youtube-player": [
+        "projects/mintplayer/ng-youtube-player/src/public-api.ts"
+      ]
+    },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
