@@ -34,3 +34,18 @@ The build fails with the following error:
 Claiming that the `NgYoutubeApiService` should also be inside the `ng-youtube-player` library project (which off course is BS).
 
 So from the moment you're trying to inject a service from one library into a component from another library, the build is broken.
+
+# Setup
+
+The workspace was created using the following basic commands:
+
+    ng new mintplayer-ng-youtube-player --create-application=false --style=scss
+    cd mintplayer-ng-youtube-player
+    ng generate library @mintplayer/ng-youtube-api
+    ng generate library @mintplayer/ng-youtube-player
+    ng generate application ng-youtube-player-demo --routing --style=scss --strict
+    code .
+
+    ng build @mintplayer/ng-youtube-api
+    ng build @mintplayer/ng-youtube-player
+    ng build ng-youtube-player-demo
