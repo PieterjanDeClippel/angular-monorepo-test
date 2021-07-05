@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+// import { NgYoutubeApiService } from '@mintplayer/ng-youtube-api';
 
 @Component({
   selector: 'lib-ng-youtube-player',
@@ -12,7 +13,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NgYoutubePlayerComponent implements OnInit {
 
-  constructor() { }
+  constructor(/*private youtubeApiService: NgYoutubeApiService*/) {
+  }
 
   ngOnInit(): void {
   }
