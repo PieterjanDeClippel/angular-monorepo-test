@@ -12,4 +12,8 @@ export * from './lib/ng-youtube-player.module';
  * ng generate library @mintplayer/ng-youtube-player
  * ng generate application ng-youtube-player-demo --routing --style=scss --strict
  * code .
+ * 
+ * ng build @mintplayer/ng-youtube-api
+ * ng build @mintplayer/ng-youtube-player
+ * ng build ng-youtube-player-demo
  */
